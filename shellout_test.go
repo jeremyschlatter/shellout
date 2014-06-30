@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func ExampleShellout() {
+func Example() {
 	stdout, _ := Start(strings.NewReader("example"), "cat")
 	io.Copy(os.Stdout, stdout)
 	// Output:
