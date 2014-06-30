@@ -8,14 +8,13 @@ import (
 
 type reader struct {
 	cmd *exec.Cmd
-	r   io.Reader
+	r   io.ReadCloser
 }
 
 func (r *reader) Read(buf []byte) (int, error) {
 	n, err := r.r.Read(buf)
 	if err == io.EOF {
 		r.cmd.Wait()
-		err = nil
 	}
 	return n, err
 }
