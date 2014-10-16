@@ -1,4 +1,4 @@
-// Package shellout provides a convenince wrapper for os/exec.
+// Package shellout provides a convenience wrapper for os/exec.
 package shellout
 
 import (
